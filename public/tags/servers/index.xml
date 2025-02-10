@@ -7,8 +7,100 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>ᕦʕ •ᴥ•ʔᕤ</copyright>
-    <lastBuildDate>Sun, 10 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/servers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Securing your Linux server&#39;s ssh.</title>
+      <link>http://localhost:1313/blog/securing-server/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/securing-server/</guid>
+      <description>&lt;p&gt;This post is made for debian based linux distros, most won&amp;rsquo;t work on other distros&lt;/p&gt;&#xA;&lt;h2 id=&#34;non-root-account-for-logins&#34;&gt;Non-root account for logins&lt;/h2&gt;&#xA;&lt;p&gt;When securing ssh on your server the first thing you want to to do is change the user you login as, start with making a new user with any username you want&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adduser declan&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After that add it to the list of sudoers&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;usermod -aG sudo declan&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;moving-to-ssh-keys&#34;&gt;Moving to SSH keys&lt;/h2&gt;&#xA;&lt;p&gt;I think it should be pretty obvious that using plaintext passwords for logging into your system isn&amp;rsquo;t the best idea, so thats why you should use something like PuTTYGen to generate an ssh key, generate a new key then copy and paste the public key generated into &lt;code&gt;/home/declan/.ssh/authorized_keys&lt;/code&gt; (Change to your username)&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>This post is made for debian based linux distros, most won&rsquo;t work on other distros</p>
+<h2 id="non-root-account-for-logins">Non-root account for logins</h2>
+<p>When securing ssh on your server the first thing you want to to do is change the user you login as, start with making a new user with any username you want</p>
+
+
+
+
+
+<pre tabindex="0"><code>adduser declan</code></pre><p>After that add it to the list of sudoers</p>
+
+
+
+
+
+<pre tabindex="0"><code>usermod -aG sudo declan</code></pre><h2 id="moving-to-ssh-keys">Moving to SSH keys</h2>
+<p>I think it should be pretty obvious that using plaintext passwords for logging into your system isn&rsquo;t the best idea, so thats why you should use something like PuTTYGen to generate an ssh key, generate a new key then copy and paste the public key generated into <code>/home/declan/.ssh/authorized_keys</code> (Change to your username)</p>
+<p>Each key is seperated by a new line, simply paste the key in with no spaces or anything else around</p>
+<h2 id="changing-the-ssh-configuration">Changing the SSH configuration</h2>
+<p>This process can differ depending on your host, but for most servers the ssh config is located in <code>/etc/ssh/sshd_config.d</code>, in this file you want to change the following values</p>
+
+
+
+
+
+<pre tabindex="0"><code>PubkeyAuthentication yes</code></pre>
+
+
+
+
+<pre tabindex="0"><code>PasswordAuthentication no</code></pre>
+
+
+
+
+<pre tabindex="0"><code>PermitRootLogin no</code></pre>
+
+
+
+
+<pre tabindex="0"><code>Port 13923</code></pre><p>This will disable password authentication, disable root login (Make sure you&rsquo;ve setup another account) and allow you to login using ssh keys, which I showed how to setup above and change the ssh port</p>
+<p>Run the command below to apply the ssh configuration settings</p>
+
+
+
+
+
+<pre tabindex="0"><code>sudo systemctl restart ssh</code></pre><h2 id="configuring-a-firewall">Configuring a firewall</h2>
+<p>You can use UFW which is preinstalled on ubuntu and can be installed on debian using apt, it can be easily setup using a few commands, a firewall blocks connections to ports or services you don&rsquo;t want exposed</p>
+<h3 id="allowingdenying-a-port">Allowing/Denying a port</h3>
+
+
+
+
+
+<pre tabindex="0"><code>ufw allow [port]</code></pre>
+
+
+
+
+<pre tabindex="0"><code>ufw deny [port]</code></pre><h3 id="allowing-a-range-of-ports">Allowing a range of ports</h3>
+
+
+
+
+
+<pre tabindex="0"><code>ufw allow [port]:[port]/tcp</code></pre>
+
+
+
+
+<pre tabindex="0"><code>ufw allow [port]:[port]/udp</code></pre><h3 id="enabling-the-firewall">Enabling the firewall</h3>
+
+
+
+
+
+<pre tabindex="0"><code>ufw enable</code></pre><h3 id="checking-firewall-status">Checking firewall status</h3>
+
+
+
+
+
+<pre tabindex="0"><code>ufw status</code></pre><h2 id="ntfy-notifcations-on-login">NTFY notifcations on login</h2>
+<p>As an extra security precaution you can use ntfy to get mobile notifications whenever someone remotely connects to your server, I used <a href="https://paramdeo.com/blog/enabling-ssh-login-notifications-using-ntfy">this</a> tutorial and it worked for me, you can also find an example on the ntfy docs <a href="https://docs.ntfy.sh/examples/#ssh-login-alerts">here</a></p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Oracle cloud is a horrible platform.</title>
       <link>http://localhost:1313/blog/oracle-cloud-rant/</link>
