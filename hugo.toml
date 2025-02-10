@@ -1,0 +1,9 @@
+baseURL = 'https://alecks.dev/'
+languageCode = 'en-us'
+title = "Alecks"
+theme="hugo-bearcub"
+copyright = "ᕦʕ •ᴥ•ʔᕤ"
+defaultContentLanguage = "en"
+
+[languages.en.params]
+  madeWith = "Made with [Bear Cub](https://github.com/clente/hugo-bearcub)"

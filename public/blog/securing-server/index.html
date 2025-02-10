@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Securing your Linux server&#39;s ssh. | Alecks</title>
+<meta name="title" content="Securing your Linux server&#39;s ssh." />
+<meta name="description" content="Guide to emoji usage in Hugo" />
+<meta name="author" content="Alecks" />
+<meta name="keywords" content="linux,servers,ssh,security," />
+
+
+
+
+
+
+  
+  <meta property="og:url" content="http://localhost:1313/blog/securing-server/">
+  <meta property="og:site_name" content="Alecks">
+  <meta property="og:title" content="Securing your Linux server&#39;s ssh.">
+  <meta property="og:description" content="Guide to emoji usage in Hugo">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-04-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-04-25T00:00:00+00:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Servers">
+    <meta property="article:tag" content="Ssh">
+    <meta property="article:tag" content="Security">
+
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Securing your Linux server&#39;s ssh.">
+  <meta name="twitter:description" content="Guide to emoji usage in Hugo">
+
+
+  
+  
+  <meta itemprop="name" content="Securing your Linux server&#39;s ssh.">
+  <meta itemprop="description" content="Guide to emoji usage in Hugo">
+  <meta itemprop="datePublished" content="2024-04-25T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-04-25T00:00:00+00:00">
+  <meta itemprop="wordCount" content="338">
+  <meta itemprop="keywords" content="Linux,Servers,Ssh,Security">
+
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  
+  <link href="/original.min.css" rel="stylesheet">
+
+  
+    
+    <link href="/syntax.min.css" rel="stylesheet">
+  
+
+  
+
+  
+</head>
+
+<body>
+  <header><a class="skip-link" href="#main-content">Skip to main content</a>
+
+<a href="/" class="title"><h1>Alecks</h1></a>
+<nav>
+  <a href="/">Home</a>
+
+  <a href="/blog/">Blog</a>
+
+<a href='http://localhost:1313/index.xml'>RSS</a>
+
+
+
+
+
+
+
+</nav>
+</header>
+  <main id="main-content">
+
+<h1>Securing your Linux server&#39;s ssh.</h1>
+<p class="byline">
+  <time datetime='2024-04-25' pubdate>
+    2024-04-25
+  </time>
+  · Alecks
+</p>
+
+<content>
+  <p>This post is made for debian based linux distros, most won&rsquo;t work on other distros</p>
+<h2 id="non-root-account-for-logins">Non-root account for logins</h2>
+<p>When securing ssh on your server the first thing you want to to do is change the user you login as, start with making a new user with any username you want</p>
+
+
+
+
+
+<pre tabindex="0"><code>adduser declan</code></pre><p>After that add it to the list of sudoers</p>
+
+
+
+
+
+<pre tabindex="0"><code>usermod -aG sudo declan</code></pre><h2 id="moving-to-ssh-keys">Moving to SSH keys</h2>
+<p>I think it should be pretty obvious that using plaintext passwords for logging into your system isn&rsquo;t the best idea, so thats why you should use something like PuTTYGen to generate an ssh key, generate a new key then copy and paste the public key generated into <code>/home/declan/.ssh/authorized_keys</code> (Change to your username)</p>
+<p>Each key is seperated by a new line, simply paste the key in with no spaces or anything else around</p>
+<h2 id="changing-the-ssh-configuration">Changing the SSH configuration</h2>
+<p>This process can differ depending on your host, but for most servers the ssh config is located in <code>/etc/ssh/sshd_config.d</code>, in this file you want to change the following values</p>
+
+
+
+
+
+<pre tabindex="0"><code>PubkeyAuthentication yes</code></pre>
+
+
+
+
+<pre tabindex="0"><code>PasswordAuthentication no</code></pre>
+
+
+
+
+<pre tabindex="0"><code>PermitRootLogin no</code></pre>
+
+
+
+
+<pre tabindex="0"><code>Port 13923</code></pre><p>This will disable password authentication, disable root login (Make sure you&rsquo;ve setup another account) and allow you to login using ssh keys, which I showed how to setup above and change the ssh port</p>
+<p>Run the command below to apply the ssh configuration settings</p>
+
+
+
+
+
+<pre tabindex="0"><code>sudo systemctl restart ssh</code></pre><h2 id="configuring-a-firewall">Configuring a firewall</h2>
+<p>You can use UFW which is preinstalled on ubuntu and can be installed on debian using apt, it can be easily setup using a few commands, a firewall blocks connections to ports or services you don&rsquo;t want exposed</p>
+<h3 id="allowingdenying-a-port">Allowing/Denying a port</h3>
+
+
+
+
+
+<pre tabindex="0"><code>ufw allow [port]</code></pre>
+
+
+
+
+<pre tabindex="0"><code>ufw deny [port]</code></pre><h3 id="allowing-a-range-of-ports">Allowing a range of ports</h3>
+
+
+
+
+
+<pre tabindex="0"><code>ufw allow [port]:[port]/tcp</code></pre>
+
+
+
+
+<pre tabindex="0"><code>ufw allow [port]:[port]/udp</code></pre><h3 id="enabling-the-firewall">Enabling the firewall</h3>
+
+
+
+
+
+<pre tabindex="0"><code>ufw enable</code></pre><h3 id="checking-firewall-status">Checking firewall status</h3>
+
+
+
+
+
+<pre tabindex="0"><code>ufw status</code></pre><h2 id="ntfy-notifcations-on-login">NTFY notifcations on login</h2>
+<p>As an extra security precaution you can use ntfy to get mobile notifications whenever someone remotely connects to your server, I used <a href="https://paramdeo.com/blog/enabling-ssh-login-notifications-using-ntfy">this</a> tutorial and it worked for me, you can also find an example on the ntfy docs <a href="https://docs.ntfy.sh/examples/#ssh-login-alerts">here</a></p>
+
+</content>
+<p>
+  
+    <a class="blog-tags" href="/tags/linux/">#linux</a>
+  
+    <a class="blog-tags" href="/tags/servers/">#servers</a>
+  
+    <a class="blog-tags" href="/tags/ssh/">#ssh</a>
+  
+    <a class="blog-tags" href="/tags/security/">#security</a>
+  
+</p>
+
+
+
+
+  </main>
+  <footer><small>
+  ᕦʕ •ᴥ•ʔᕤ | Made with <a href="https://github.com/clente/hugo-bearcub">Bear Cub</a>
+</small></footer>
+
+    
+</body>
+
+</html>
