@@ -1,7 +1,7 @@
 
 +++
 author = "Alecks"
-title = "Securing your Linux server's ssh."
+title = "Securing your Linux servers ssh."
 date = "2024-04-25"
 description = "Guide to emoji usage in Hugo"
 tags = [
