@@ -27,4 +27,4 @@ There are a few things I thought off that could’ve got my account terminated i
 ## “Closing” my account
 Another issue I have with oracles cloud service is that when you “delete” a tenancy (An account) it doesn’t actually delete ANYTHING, it just disables it putting it under the illusion that its gone. You can even still login to the account and access the dashboard. I disabled my other oracle cloud account expecting to be able to sign up for it again once the old one was deleted and change the home region, however im still waiting to this day 4 months later for it to fully delete and it hasn’t yet and im not expecting it to at all.
 
-So that is why I will not ever be returning to this horrible cloud provider, their offering is great, but its free for a reason. Overall its not a bad offering, just make sure to 
+So that is why I will not ever be returning to this horrible cloud provider, their offering is tempting but you should outright avoid it unless your hosting non-critial workloads, and even then keep backups on a 3rd party service.
