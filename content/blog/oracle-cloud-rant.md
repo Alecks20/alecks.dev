@@ -1,7 +1,7 @@
 
 +++
 author = "Alecks"
-title = "Oracle cloud is a horrible platform."
+title = "Oracle cloud is a horrible platform and should be avoided"
 date = "2024-03-10"
 description = ""
 tags = [
