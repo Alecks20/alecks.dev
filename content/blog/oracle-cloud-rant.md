@@ -1,6 +1,6 @@
 
 +++
-author = "Alecks"
+author = "Alex"
 title = "Oracle cloud is a horrible platform."
 date = "2024-03-10"
 description = ""
