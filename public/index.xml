@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Alecks</title>
+    <title>Alecks :)</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Alecks</description>
+    <description>Recent content on Alecks :)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© Alecks 2025</copyright>
@@ -14,21 +14,19 @@
       <link>http://localhost:1313/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/</guid>
-      <description>&lt;h2 id=&#34;projects&#34;&gt;Projects&lt;/h2&gt;&#xA;&lt;p&gt;What I&amp;rsquo;m currently working on, really not a lot right now (* = priority).&lt;/p&gt;&#xA;&lt;h3 id=&#34;in-development&#34;&gt;In Development&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://thoughty.xyz&#34;&gt;*Thoughty&lt;/a&gt; - your own free, private and anonymous internet diary and thought organiser with cloud sync, efficient tools and a public feed.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://packs.alecks.dev&#34;&gt;Packs&lt;/a&gt; - free and easy resource pack hosting for minecraft servers, with a dashboard coming (eventually).&lt;/p&gt;&#xA;&lt;h3 id=&#34;not-maintined--on-hold&#34;&gt;Not maintined / On Hold&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/Alecks20/URL-Shortener&#34;&gt;URL Shortener&lt;/a&gt; - standalone url shortening service that depends on mongo (built to be integrated with my other services)&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<h2 id="projects">Projects</h2>
-<p>What I&rsquo;m currently working on, really not a lot right now (* = priority).</p>
-<h3 id="in-development">In Development</h3>
+      <description>&lt;h3 id=&#34;in-development&#34;&gt;In Development&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://thoughty.xyz&#34;&gt;*Thoughty&lt;/a&gt; - your own free, private and anonymous internet diary and thought organiser with cloud sync, efficient tools and a public feed.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://packs.alecks.dev&#34;&gt;Packs&lt;/a&gt; - free and easy resource pack hosting for minecraft servers, with a dashboard coming (eventually).&lt;/p&gt;&#xA;&lt;h3 id=&#34;not-maintined--on-hold&#34;&gt;Not maintined / On Hold&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/Alecks20/URL-Shortener&#34;&gt;URL Shortener&lt;/a&gt; - standalone url shortening service that depends on mongo (built to be integrated with my other services).&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/Alecks20/cdn&#34;&gt;CDN&lt;/a&gt; - really barebones express web server that delivers files from a folder.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<h3 id="in-development">In Development</h3>
 <p><a href="https://thoughty.xyz">*Thoughty</a> - your own free, private and anonymous internet diary and thought organiser with cloud sync, efficient tools and a public feed.</p>
 <p><a href="https://packs.alecks.dev">Packs</a> - free and easy resource pack hosting for minecraft servers, with a dashboard coming (eventually).</p>
 <h3 id="not-maintined--on-hold">Not maintined / On Hold</h3>
-<p><a href="https://github.com/Alecks20/URL-Shortener">URL Shortener</a> - standalone url shortening service that depends on mongo (built to be integrated with my other services)</p>
+<p><a href="https://github.com/Alecks20/URL-Shortener">URL Shortener</a> - standalone url shortening service that depends on mongo (built to be integrated with my other services).</p>
 <p><a href="https://github.com/Alecks20/cdn">CDN</a> - really barebones express web server that delivers files from a folder.</p>
 <h3 id="discontinued">Discontinued</h3>
 <p><a href="https://github.com/Alecks20/Personal-Website">a3d.pro</a> - my old website built with flask, html and css.</p>
 <p><a href="https://github.com/alecks20/Cloudy">Cloudy</a> - multipurpose discord bot with fun, games, moderation, utilites and more.</p>
 <p><a href="https://github.com/Alecks20/Panda-py">Panda-py</a> - my first attempt at building a discord bot with discord.py, also my first python project.</p>
 <p><a href="https://github.com/Alecks20/Mongo-Migrator">Mongo Migrator</a> - originally made for when I migrated my discord bot to new servers, transfers every db, collection and object on a mongo server to a new one.</p>
-<p><a href="https://github.com/Alecks20/Alecks-Media/">Alecks Media</a> - flask website that let you upload and fetch files on it (via gui and api)</p>
+<p><a href="https://github.com/Alecks20/Alecks-Media/">Alecks Media</a> - flask website that let you upload and fetch files on it (via gui and api).</p>
 ]]></content:encoded>
     </item>
     <item>
