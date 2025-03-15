@@ -6,28 +6,37 @@
     <description>Recent content on Alecks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>ᕦʕ •ᴥ•ʔᕤ</copyright>
-    <lastBuildDate>Sun, 09 Feb 2025 22:20:53 +0800</lastBuildDate>
+    <copyright>© Alecks 2025</copyright>
+    <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Privacy</title>
-      <link>http://localhost:1313/privacy/</link>
-      <pubDate>Sun, 09 Feb 2025 22:20:53 +0800</pubDate>
-      <guid>http://localhost:1313/privacy/</guid>
-      <description>&lt;p&gt;I have a hybrid cloud setup where services and data that require high availability live in the cloud and more sensitive data lives on my own hardware (onsite).&lt;/p&gt;&#xA;&lt;p&gt;Pterodactyl panel - data is stored in the cloud (includes: email address, encrypted password, server data like name, description and your ip address in activity logs). your server files and backups are both stored onsite.&lt;/p&gt;&#xA;&lt;p&gt;Revolt (alecks chat) - messages, account data, servers, logs and all other data is stored on an onsite server (service is not recommended for highly sensitive conversations)&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>I have a hybrid cloud setup where services and data that require high availability live in the cloud and more sensitive data lives on my own hardware (onsite).</p>
-<p>Pterodactyl panel - data is stored in the cloud (includes: email address, encrypted password, server data like name, description and your ip address in activity logs). your server files and backups are both stored onsite.</p>
-<p>Revolt (alecks chat) - messages, account data, servers, logs and all other data is stored on an onsite server (service is not recommended for highly sensitive conversations)</p>
-<p><del>Encrypted disk backups of all servers are uploaded to backblaze b2</del> (work in progress)</p>
-<p>Send data erasure requests to <a href="mailto:alecks03@proton.me">alecks03@proton.me</a>, include all data possible and proof its yours.</p>
+      <title>Projects</title>
+      <link>http://localhost:1313/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/</guid>
+      <description>&lt;h2 id=&#34;projects&#34;&gt;Projects&lt;/h2&gt;&#xA;&lt;p&gt;What I&amp;rsquo;m currently working on, really not a lot right now (* = priority).&lt;/p&gt;&#xA;&lt;h3 id=&#34;in-development&#34;&gt;In Development&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://thoughty.xyz&#34;&gt;*Thoughty&lt;/a&gt; - your own free, private and anonymous internet diary and thought organiser with cloud sync, efficient tools and a public feed.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://packs.alecks.dev&#34;&gt;Packs&lt;/a&gt; - free and easy resource pack hosting for minecraft servers, with a dashboard coming (eventually).&lt;/p&gt;&#xA;&lt;h3 id=&#34;not-maintined--on-hold&#34;&gt;Not maintined / On Hold&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/Alecks20/URL-Shortener&#34;&gt;URL Shortener&lt;/a&gt; - standalone url shortening service that depends on mongo (built to be integrated with my other services)&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<h2 id="projects">Projects</h2>
+<p>What I&rsquo;m currently working on, really not a lot right now (* = priority).</p>
+<h3 id="in-development">In Development</h3>
+<p><a href="https://thoughty.xyz">*Thoughty</a> - your own free, private and anonymous internet diary and thought organiser with cloud sync, efficient tools and a public feed.</p>
+<p><a href="https://packs.alecks.dev">Packs</a> - free and easy resource pack hosting for minecraft servers, with a dashboard coming (eventually).</p>
+<h3 id="not-maintined--on-hold">Not maintined / On Hold</h3>
+<p><a href="https://github.com/Alecks20/URL-Shortener">URL Shortener</a> - standalone url shortening service that depends on mongo (built to be integrated with my other services)</p>
+<p><a href="https://github.com/Alecks20/cdn">CDN</a> - really barebones express web server that delivers files from a folder.</p>
+<h3 id="discontinued">Discontinued</h3>
+<p><a href="https://github.com/Alecks20/Personal-Website">a3d.pro</a> - my old website built with flask, html and css.</p>
+<p><a href="https://github.com/alecks20/Cloudy">Cloudy</a> - multipurpose discord bot with fun, games, moderation, utilites and more.</p>
+<p><a href="https://github.com/Alecks20/Panda-py">Panda-py</a> - my first attempt at building a discord bot with discord.py, also my first python project.</p>
+<p><a href="https://github.com/Alecks20/Mongo-Migrator">Mongo Migrator</a> - originally made for when I migrated my discord bot to new servers, transfers every db, collection and object on a mongo server to a new one.</p>
+<p><a href="https://github.com/Alecks20/Alecks-Media/">Alecks Media</a> - flask website that let you upload and fetch files on it (via gui and api)</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>Securing your Linux server&#39;s ssh.</title>
+      <title>Securing ssh on your linux server.</title>
       <link>http://localhost:1313/blog/securing-server/</link>
       <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/securing-server/</guid>
-      <description>&lt;p&gt;This post is made for debian based linux distros, most won&amp;rsquo;t work on other distros&lt;/p&gt;&#xA;&lt;h2 id=&#34;non-root-account-for-logins&#34;&gt;Non-root account for logins&lt;/h2&gt;&#xA;&lt;p&gt;When securing ssh on your server the first thing you want to to do is change the user you login as, start with making a new user with any username you want&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adduser declan&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After that add it to the list of sudoers&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;usermod -aG sudo declan&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;moving-to-ssh-keys&#34;&gt;Moving to SSH keys&lt;/h2&gt;&#xA;&lt;p&gt;I think it should be pretty obvious that using plaintext passwords for logging into your system isn&amp;rsquo;t the best idea, so thats why you should use something like PuTTYGen to generate an ssh key, generate a new key then copy and paste the public key generated into &lt;code&gt;/home/declan/.ssh/authorized_keys&lt;/code&gt; (Change to your username)&lt;/p&gt;</description>
+      <description>&lt;p&gt;This post is made for debian based linux distros, most won&amp;rsquo;t work on other distros&lt;/p&gt;&#xA;&lt;h2 id=&#34;non-root-account-for-logins&#34;&gt;Non-root account for logins&lt;/h2&gt;&#xA;&lt;p&gt;When securing ssh on your server the first thing you want to to do is change the user you login as, start with making a new user with any username you want&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adduser declan&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After that add it to the list of sudoers&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;usermod -aG sudo declan&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;moving-to-ssh-keys&#34;&gt;Moving to SSH keys&lt;/h2&gt;&#xA;&lt;p&gt;I think it should be pretty obvious that using plaintext passwords for logging into your system isn&amp;rsquo;t the best idea, so thats why you should use something like PuTTYGen to generate an ssh key, generate a new key then copy and paste the public key generated into &lt;code&gt;/home/declan/.ssh/authorized_keys&lt;/code&gt; (Change to your username)&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>This post is made for debian based linux distros, most won&rsquo;t work on other distros</p>
 <h2 id="non-root-account-for-logins">Non-root account for logins</h2>
 <p>When securing ssh on your server the first thing you want to to do is change the user you login as, start with making a new user with any username you want</p>
@@ -133,7 +142,7 @@
 </ul>
 <h2 id="closing-my-account">“Closing” my account</h2>
 <p>Another issue I have with oracles cloud service is that when you “delete” a tenancy (An account) it doesn’t actually delete ANYTHING, it just disables it putting it under the illusion that its gone. You can even still login to the account and access the dashboard. I disabled my other oracle cloud account expecting to be able to sign up for it again once the old one was deleted and change the home region, however im still waiting to this day 4 months later for it to fully delete and it hasn’t yet and im not expecting it to at all.</p>
-<p>So that is why I will not ever be returning to this horrible cloud provider, their offering is great, but its free for a reason. Overall its not a bad offering, just make sure to</p>
+<p>So that is why I will not ever be returning to this horrible cloud provider, their offering is tempting but you should outright avoid it unless your hosting non-critial workloads, and even then keep backups on a 3rd party service.</p>
 ]]></content:encoded>
     </item>
   </channel>

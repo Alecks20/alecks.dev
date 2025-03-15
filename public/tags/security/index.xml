@@ -6,15 +6,15 @@
     <description>Recent content in Security on Alecks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>ᕦʕ •ᴥ•ʔᕤ</copyright>
+    <copyright>© Alecks 2025</copyright>
     <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Securing your Linux server&#39;s ssh.</title>
+      <title>Securing ssh on your linux server.</title>
       <link>http://localhost:1313/blog/securing-server/</link>
       <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/securing-server/</guid>
-      <description>&lt;p&gt;This post is made for debian based linux distros, most won&amp;rsquo;t work on other distros&lt;/p&gt;&#xA;&lt;h2 id=&#34;non-root-account-for-logins&#34;&gt;Non-root account for logins&lt;/h2&gt;&#xA;&lt;p&gt;When securing ssh on your server the first thing you want to to do is change the user you login as, start with making a new user with any username you want&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adduser declan&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After that add it to the list of sudoers&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;usermod -aG sudo declan&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;moving-to-ssh-keys&#34;&gt;Moving to SSH keys&lt;/h2&gt;&#xA;&lt;p&gt;I think it should be pretty obvious that using plaintext passwords for logging into your system isn&amp;rsquo;t the best idea, so thats why you should use something like PuTTYGen to generate an ssh key, generate a new key then copy and paste the public key generated into &lt;code&gt;/home/declan/.ssh/authorized_keys&lt;/code&gt; (Change to your username)&lt;/p&gt;</description>
+      <description>&lt;p&gt;This post is made for debian based linux distros, most won&amp;rsquo;t work on other distros&lt;/p&gt;&#xA;&lt;h2 id=&#34;non-root-account-for-logins&#34;&gt;Non-root account for logins&lt;/h2&gt;&#xA;&lt;p&gt;When securing ssh on your server the first thing you want to to do is change the user you login as, start with making a new user with any username you want&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adduser declan&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After that add it to the list of sudoers&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;usermod -aG sudo declan&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;moving-to-ssh-keys&#34;&gt;Moving to SSH keys&lt;/h2&gt;&#xA;&lt;p&gt;I think it should be pretty obvious that using plaintext passwords for logging into your system isn&amp;rsquo;t the best idea, so thats why you should use something like PuTTYGen to generate an ssh key, generate a new key then copy and paste the public key generated into &lt;code&gt;/home/declan/.ssh/authorized_keys&lt;/code&gt; (Change to your username)&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>This post is made for debian based linux distros, most won&rsquo;t work on other distros</p>
 <h2 id="non-root-account-for-logins">Non-root account for logins</h2>
 <p>When securing ssh on your server the first thing you want to to do is change the user you login as, start with making a new user with any username you want</p>
