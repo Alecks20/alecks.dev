@@ -2,8 +2,8 @@ baseURL = 'https://alecks.dev/'
 languageCode = 'en-us'
 title = "Alecks"
 theme="hugo-bearcub"
-copyright = "© Alecks 2025"
+copyright = "© Alecks 2025 "
 defaultContentLanguage = "en"
 
 [languages.en.params]
-  madeWith = "[Source Code](https://github.com/alecks20/alecks.dev)"
+  madeWith = "[Source](https://github.com/alecks20/alecks.dev), [Status](https://status.alecks.dev)"
