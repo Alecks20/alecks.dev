@@ -1,17 +1,19 @@
 ---
 title: "Privacy"
 menu: "main"
-weight: 3
+weight: 5
 ---
 
 ## Privacy Notice
+
+Your private data will never be accessed without your permission or knowledge.
 
 Where your data is stored - all data is stored on well known, safe and phyically secure cloud providers such as ovh (vps & object storage), oracle (vps).
 
 Game hosting (pterodactyl) - panel data is stored in the cloud (email address, encrypted password, server data like name, description and your ip address in activity logs), your server files are stored.
 
-Packs - user identifier and file identifiers (for moderation) are stored, the .zip copy of your resource pack is hosted on our cdn.
+Thoughty - user data and entrys are stored on a database on its own seperate vps server, with strict security measures and access controls.
 
 Encrypted disk backups of all servers and game server backups are uploaded and stored in multiple ovh public cloud buckets.
 
-Send data erasure requests to alecks03@pm.me, include all identifiers possible.
+Send data erasure requests to alecks03@pm.me, include all identification possible.

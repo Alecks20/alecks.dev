@@ -1,4 +1,3 @@
+My personal website with my contact information, blog, about me and projects >_<
 
-Here you can find my blog, current projects and more maybe..? interesting information about me. 
-
-Deployed at https://alecks.dev and https://alecks.pages.dev
+Deployed to https://alecks.dev and https://alecks.pages.dev (backup)
