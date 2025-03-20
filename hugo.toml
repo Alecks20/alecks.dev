@@ -6,4 +6,4 @@ copyright = "© Alecks 2025 "
 defaultContentLanguage = "en"
 
 [languages.en.params]
-  madeWith = "[Source](https://github.com/alecks20/alecks.dev), [Status](https://status.alecks.dev)"
+  madeWith = "[Source](https://github.com/alecks20/alecks.dev)"
