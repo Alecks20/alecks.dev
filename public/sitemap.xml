@@ -2,41 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://alecks.dev/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://alecks.dev/blog/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://alecks.dev/projects/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>https://alecks.dev/tags/linux/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/securing-server/</loc>
+    <loc>https://alecks.dev/blog/securing-server/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/security/</loc>
+    <loc>https://alecks.dev/tags/security/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/servers/</loc>
+    <loc>https://alecks.dev/tags/servers/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ssh/</loc>
+    <loc>https://alecks.dev/tags/ssh/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://alecks.dev/tags/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/oracle/</loc>
+    <loc>https://alecks.dev/tags/oracle/</loc>
     <lastmod>2024-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/oracle-cloud-rant/</loc>
+    <loc>https://alecks.dev/blog/oracle-cloud-rant/</loc>
     <lastmod>2024-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/rant/</loc>
+    <loc>https://alecks.dev/tags/rant/</loc>
     <lastmod>2024-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://alecks.dev/categories/</loc>
   </url>
 </urlset>

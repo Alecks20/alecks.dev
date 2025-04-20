@@ -12,4 +12,4 @@ I use this website to publish blog posts and showcase what I'm up to, currently 
 
 If you wish to contact me you can send an email (me@alecks.dev), or add me on discord (alecks20), both will have around the same response time (~1-2 days).
 
-Find me on the web - [Steam](https://steamcommunity.com/id/myintuitions/), [Medal](https://medal.tv/u/myintuitions), [GitHub](https://github.com/Alecks20) 🐻
+Find me on the web - [Steam](https://steamcommunity.com/id/rikukagerou/), [Medal](https://medal.tv/u/tenkaisora), [GitHub](https://github.com/Alecks20) 🐻
