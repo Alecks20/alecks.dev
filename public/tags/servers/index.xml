@@ -6,9 +6,30 @@
     <description>Recent content in Servers on Alecks 🌱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>No copyright.</copyright>
-    <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <copyright>Not copyrighted •ᴗ•</copyright>
+    <lastBuildDate>Thu, 08 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/servers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pyro: my new home server build.</title>
+      <link>http://localhost:1313/blog/pyro/</link>
+      <pubDate>Thu, 08 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/pyro/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always hated the cloud, expensive subscriptions, random terminations, no physical control over your data, the trust factor and more. Which is why I&amp;rsquo;m building an abolute beast of a home server to run game servers and other services in docker containers.&lt;/p&gt;&#xA;&lt;h2 id=&#34;phyiscal-hardware-and-specs&#34;&gt;Phyiscal hardware and specs.&lt;/h2&gt;&#xA;&lt;p&gt;Below lists my hardware configuration with an explaination on why I chose each part below it&lt;/p&gt;&#xA;&lt;p&gt;CPU: AMD Ryzen 5 5500&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Good value and reasonable price (AU$200), lots of threads for lots of game servers, power efficient and high performance.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I&rsquo;ve always hated the cloud, expensive subscriptions, random terminations, no physical control over your data, the trust factor and more. Which is why I&rsquo;m building an abolute beast of a home server to run game servers and other services in docker containers.</p>
+<h2 id="phyiscal-hardware-and-specs">Phyiscal hardware and specs.</h2>
+<p>Below lists my hardware configuration with an explaination on why I chose each part below it</p>
+<p>CPU: AMD Ryzen 5 5500</p>
+<blockquote>
+<p>Good value and reasonable price (AU$200), lots of threads for lots of game servers, power efficient and high performance.</p></blockquote>
+<p>Memory: 32GB (Upgrading to 64GB later on) DDR4 RAM</p>
+<blockquote>
+<p>Enough to run a large amount of game servers and docker containers without any worry of running out, the cost increase for DDR5 (And needing an AM5 cpu) wasn&rsquo;t worth it to me so I stuck with DDR4.</p></blockquote>
+<p>Storage: 1TB NVMe SSD (Backed up to Backblaze)</p>
+<blockquote>
+<p>Incredibly fast and cheap (AU$100), not really a reason to get anything else. Offsite backups are essential for storing important information with the risk of a fire or hardware failure.</p></blockquote>
+<h2 id="networking-and-security">Networking and security.</h2>
+]]></content:encoded>
+    </item>
     <item>
       <title>Securing ssh on your linux server.</title>
       <link>http://localhost:1313/blog/securing-server/</link>

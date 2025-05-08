@@ -6,9 +6,35 @@
     <description>Recent content on Alecks 🌱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>No copyright.</copyright>
-    <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <copyright>Not copyrighted •ᴗ•</copyright>
+    <lastBuildDate>Thu, 08 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pyro: my new beast of a home server build.</title>
+      <link>http://localhost:1313/blog/pyro/</link>
+      <pubDate>Thu, 08 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/pyro/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always hated the cloud, expensive subscriptions, random terminations, no physical control over your data, the trust factor and more. Which is why I&amp;rsquo;ve built an abolute beast of a home server to run game servers and other services in docker containers.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-this-benefits-you&#34;&gt;How this benefits you.&lt;/h2&gt;&#xA;&lt;p&gt;If your someone living in Australia (Where the servers hosted) &lt;strong&gt;starting in 2026&lt;/strong&gt; I&amp;rsquo;m offering you a free small minecraft server (4-5gb ram, 2-3 threads), valheim server, terraria server or any game that isn&amp;rsquo;t super resource intensive (Full access/control will be given by Pterodactyl Panel), just reach out to me via Discord or Email.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I&rsquo;ve always hated the cloud, expensive subscriptions, random terminations, no physical control over your data, the trust factor and more. Which is why I&rsquo;ve built an abolute beast of a home server to run game servers and other services in docker containers.</p>
+<h2 id="how-this-benefits-you">How this benefits you.</h2>
+<p>If your someone living in Australia (Where the servers hosted) <strong>starting in 2026</strong> I&rsquo;m offering you a free small minecraft server (4-5gb ram, 2-3 threads), valheim server, terraria server or any game that isn&rsquo;t super resource intensive (Full access/control will be given by Pterodactyl Panel), just reach out to me via Discord or Email.</p>
+<h2 id="phyiscal-hardware-and-specs">Phyiscal hardware and specs.</h2>
+<p>Below lists my hardware configuration with an explaination why I chose each part.</p>
+<p>CPU: AMD Ryzen 5 5500</p>
+<blockquote>
+<p>Good value and reasonable price (AU$200), lots of threads for lots of game servers, power efficient and high performance.</p></blockquote>
+<p>Memory: 32GB (Upgrading to 64GB later on) DDR4 RAM</p>
+<blockquote>
+<p>Enough to run a large amount of game servers and docker containers without any worry of running out, the cost increase for DDR5 (And needing an AM5 cpu) wasn&rsquo;t worth it to me so I stuck with DDR4.</p></blockquote>
+<p>Storage: 1TB NVMe SSD (Backed up to Backblaze)</p>
+<blockquote>
+<p>Incredibly fast and cheap (AU$100), not really a reason to get anything else. Offsite backups are essential for storing important information with the risk of a fire or hardware failure.</p></blockquote>
+<h2 id="networking-security-and-monitoring">Networking, security and monitoring.</h2>
+<p>Ideally you&rsquo;d aim against port forwarding but bandwidth in Australia is quite expensive and I have amazing fibre internet with built in dos protection and unlimited data so I port forward only game server ports (No remote access services)</p>
+<p>To secure my home network locally I block the server from connecting to any devices locally and only allow other local devices to connect to <em>it</em> (such as my computer for portainer or ssh), this stops anyone who hacks it through the internet from gaining access to my home network.</p>
+<p>For resource and uptime monitoring I use <a href="https://hetrixtools.com">HetrixTools</a>, an amazing free monitoring service with a server monitor that story history of cpu, ram, storage and bandwidth usage and monitors from 4 different locations at once.</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Securing ssh on your linux server.</title>
       <link>http://localhost:1313/blog/securing-server/</link>
