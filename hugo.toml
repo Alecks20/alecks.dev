@@ -2,7 +2,7 @@ baseURL = 'https://alecks.dev/'
 languageCode = 'en-us'
 title = "Alecks 🌱"
 theme="hugo-bearcub"
-copyright = "No copyright ✧.*"
+copyright = "No copyright."
 defaultContentLanguage = "en"
 
 [languages.en.params]
