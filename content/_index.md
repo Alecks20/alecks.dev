@@ -3,13 +3,10 @@ title: "Home"
 menu: "main"
 weight: 1
 ---
-Hello internet, 
+Hello Internet, 
 
-My name is Alex and I'm a self-taught developer from Australia who has a passion for system administration and programming (Currently know Python and JS) I like anime, gaming, linux, tinking with computers, homelabbing, and much more.
+My name is Alecks, I'm a self-taught developer from Australia with a passion for system administration, networking, infrastructure, homelabbing and programming (Fairly experienced in Python, new to JavaScript). I also enjoy anime, reading and movies.
 
-I use this website to publish blog posts and showcase what I'm up to, currently its just guides, rants and my experience with different services.
+I use this website to publish my writings (blog posts, rants, guides) and run my own little digital garden on the internet.
 
-
-If you wish to contact me you can send an email (me@alecks.dev), or add me on discord (alecks20), both will have around the same response time (~1-2 days).
-
-Find me on the web - [Steam](https://steamcommunity.com/profiles/76561199121598457/), [GitHub](https://github.com/Alecks20) 🐻
+Find me on the web - *[Steam](https://steamcommunity.com/profiles/76561199121598457/), [GitHub](https://github.com/Alecks20)*
