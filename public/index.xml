@@ -14,14 +14,15 @@
       <link>http://localhost:1313/homelab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/homelab/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve always hated the cloud, expensive subscriptions, random terminations, no physical control over your data, the trust factor and more. Which is why I plan to have zero cloud server subscriptions by 2026 and run everything from here.&lt;/p&gt;&#xA;&lt;p&gt;Currently everything is brand new hardware but I&amp;rsquo;d like to get into repurposing some second-hand builds later on.&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Pyro Build&lt;/th&gt;&#xA;          &lt;th&gt;Specs&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;CPU&lt;/td&gt;&#xA;          &lt;td&gt;AMD Ryzen 5 5500&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Memory&lt;/td&gt;&#xA;          &lt;td&gt;32GB Corsair DDR4 3000Mhz RAM&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Storage&lt;/td&gt;&#xA;          &lt;td&gt;1TB Kingston NVMe SSD&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;PSU&lt;/td&gt;&#xA;          &lt;td&gt;Corsair RM750x&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Motherboard&lt;/td&gt;&#xA;          &lt;td&gt;MSI B450M PRO-VDH Max&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&lt;em&gt;More servers coming soon&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>I&rsquo;ve always hated the cloud, expensive subscriptions, random terminations, no physical control over your data, the trust factor and more. Which is why I plan to have zero cloud server subscriptions by 2026 and run everything from here.</p>
+      <description>&lt;p&gt;The cloud is expensive, you can have random terminations or account issues, theres no physical control over your data and much more. Which is why I plan to have zero cloud server subscriptions by 2026 and run everything from here.&lt;/p&gt;&#xA;&lt;p&gt;Currently everything is brand new hardware but I&amp;rsquo;d like to get into repurposing some second-hand builds later on.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Pyro&lt;/strong&gt; &lt;em&gt;-&lt;/em&gt; Beefy build for game servers and other miscellaneous docker containers.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>The cloud is expensive, you can have random terminations or account issues, theres no physical control over your data and much more. Which is why I plan to have zero cloud server subscriptions by 2026 and run everything from here.</p>
 <p>Currently everything is brand new hardware but I&rsquo;d like to get into repurposing some second-hand builds later on.</p>
+<p><strong>Pyro</strong> <em>-</em> Beefy build for game servers and other miscellaneous docker containers.</p>
 <table>
   <thead>
       <tr>
-          <th>Pyro Build</th>
-          <th>Specs</th>
+          <th>Category</th>
+          <th>Part Chosen</th>
       </tr>
   </thead>
   <tbody>
