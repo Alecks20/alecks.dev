@@ -1,23 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" dir="ltr">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Securing ssh on your linux server. | Alecks 🌱</title>
-<meta name="title" content="Securing ssh on your linux server." />
-<meta name="description" content="Guide to emoji usage in Hugo" />
-<meta name="author" content="Alecks" />
-<meta name="keywords" content="linux,servers,ssh,security," />
-
-
-
-
-
-
   
-  <meta property="og:url" content="http://localhost:1313/blog/securing-server/">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="http://localhost:1313/favicon.ico" />
+<meta property="og:url" content="http://localhost:1313/blog/securing-server/">
   <meta property="og:site_name" content="Alecks 🌱">
   <meta property="og:title" content="Securing ssh on your linux server.">
   <meta property="og:description" content="Guide to emoji usage in Hugo">
@@ -31,154 +20,153 @@
     <meta property="article:tag" content="Ssh">
     <meta property="article:tag" content="Security">
 
+<title>Alecks 🌱 | Securing ssh on your linux server.</title>
 
+    <link rel="stylesheet" href="/css/main.css">
   
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Securing ssh on your linux server.">
-  <meta name="twitter:description" content="Guide to emoji usage in Hugo">
+      <link rel="stylesheet" href="/css/palette/eink.css">
 
+      <script src="/js/main.js"></script>
 
-  
-  
-  <meta itemprop="name" content="Securing ssh on your linux server.">
-  <meta itemprop="description" content="Guide to emoji usage in Hugo">
-  <meta itemprop="datePublished" content="2024-04-25T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-04-25T00:00:00+00:00">
-  <meta itemprop="wordCount" content="266">
-  <meta itemprop="keywords" content="Linux,Servers,Ssh,Security">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-<meta name="referrer" content="no-referrer-when-downgrade" />
-
-  
-  <link href="/original.min.css" rel="stylesheet">
-
-  
-    
-    <link href="/syntax.min.css" rel="stylesheet">
-  
-
-  
-
-  
 </head>
 
-<body>
-  <header><a class="skip-link" href="#main-content">Skip to main content</a>
+  
+<body
+>
+  
+  <main>
+    
+  <div class="container pt-5">
+    <div class="row mt-5 pt-5">
+      
+  <nav aria-label="breadcrumb" class="small">
+    <ol class="breadcrumb fw-bold">
+    <li class="breadcrumb-item">
+      <a href="/"
+        
+      >home</a>
+      
+    </li>
+    <li class="breadcrumb-item">
+      <a aria-current="true" class="ancestor" href="/blog/"
+        
+      >blog</a>
+      
+    </li>
+    <li class="breadcrumb-item">
+      <a href="/homelab/"
+        
+      >homelab</a>
+      
+    </li>
+    </ol>
+  </nav>
 
-<a href="/" class="title"><h1>Alecks 🌱</h1></a>
-<nav>
-  <a href="/">Home</a>
-
-  <a href="/blog/">Blog</a>
-
-  <a href="/homelab/">Homelab</a>
-
-<a href='http://localhost:1313/index.xml'>RSS</a>
-
-
-
-
-
-
-
-</nav>
-</header>
-  <main id="main-content">
-
-<h1>Securing ssh on your linux server.</h1>
-<p class="byline">
-  <time datetime='2024-04-25' pubdate>
-    2024-04-25
-  </time>
-  · Alecks
-</p>
-
-<content>
-  <p>This post is made for debian based linux distros</p>
+    </div>
+    
+    <div class="post">
+      <header class="mb-4">
+        <h1 class="text-uppercase">Securing ssh on your linux server.</h1>
+        
+        
+        <div aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item small">
+              
+              <time datetime="2024-04-25T00:00:00&#43;00:00">April 25, 2024</time>
+            </li>
+            
+            
+            <li class="breadcrumb-item small">
+              2 minutes
+            </li>
+          </ol>
+        </div>
+      </header>
+      <article>
+        <p>This post is made for debian based linux distros</p>
 <h2 id="non-root-account-for-logins--disable-root-login">Non-root account for logins / Disable root login.</h2>
 <p>Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants</p>
-
-
-
-
-
-<pre tabindex="0"><code>adduser kuma</code></pre><p>Then add it to the list of sudoers</p>
-
-
-
-
-
-<pre tabindex="0"><code>usermod -aG sudo kuma</code></pre><h2 id="using-ssh-keys-over-plaintext-passwords">Using SSH keys over plaintext passwords.</h2>
+<pre tabindex="0"><code>adduser kuma
+</code></pre><p>Then add it to the list of sudoers</p>
+<pre tabindex="0"><code>usermod -aG sudo kuma
+</code></pre><h2 id="using-ssh-keys-over-plaintext-passwords">Using SSH keys over plaintext passwords.</h2>
 <p>SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.</p>
 <p>Generate an ssh key using PuttyGen and paste it on a new line in <code>/home/&lt;your_username&gt;/.ssh/authorized_keys</code></p>
 <h2 id="updating-your-ssh-configuration">Updating your SSH configuration.</h2>
 <p>This process can differ depending on your host, but for most servers the ssh config is located in <code>/etc/ssh/sshd_config</code>, in the file you want to change the following values</p>
-
-
-
-
-
-<pre tabindex="0"><code>PasswordAuthentication no</code></pre>
-
-
-
-
-<pre tabindex="0"><code>PubkeyAuthentication yes</code></pre>
-
-
-
-
-<pre tabindex="0"><code>PermitRootLogin no</code></pre><p>Changing these config vaulues will</p>
+<pre tabindex="0"><code>PasswordAuthentication no
+</code></pre><pre tabindex="0"><code>PubkeyAuthentication yes
+</code></pre><pre tabindex="0"><code>PermitRootLogin no
+</code></pre><p>Changing these config vaulues will</p>
 <ul>
 <li>Disable password authentication</li>
 <li>Allow you to login using ssh keys (Which I showed how to setup above)</li>
 <li>Disable root login (Applying the steps from before)</li>
 </ul>
 <p>Run the command below to apply the motifications</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo systemctl restart ssh</code></pre><h2 id="ntfy-notifcations-on-ssh-login">NTFY notifcations on ssh login.</h2>
+<pre tabindex="0"><code>sudo systemctl restart ssh
+</code></pre><h2 id="ntfy-notifcations-on-ssh-login">NTFY notifcations on ssh login.</h2>
 <p>Adding these lines to your <code>/etc/profile</code> file will send a request to your chosen ntfy server when any user logs in via ssh</p>
-
-
-
-
-
 <pre tabindex="0"><code>if [ -n &#34;$SSH_CLIENT&#34; ]; then
 
 NTFY=&#34;${USER}@$(hostname -f) from $(echo $SSH_CLIENT|awk &#39;{print $1}&#39;)&#34;
 
 curl -u :&lt;ntfy_api_key&gt; -s -H &#34;Title: SSH Login&#34; -d &#34;$NTFY&#34; -L  &#34;https://ntfy.exaple.com/ssh&#34; &gt; /dev/null
 
-fi</code></pre><p>Modify to add your own api key and change the url to your ntfy server</p>
+fi
+</code></pre><p>Modify to add your own api key and change the url to your ntfy server</p>
 <p>You can also find an example on the ntfy docs <a href="https://docs.ntfy.sh/examples/#ssh-login-alerts">here</a> (Didn&rsquo;t work for me)</p>
 
-</content>
-<p>
-  
-    <a class="blog-tags" href="/tags/linux/">#linux</a>
-  
-    <a class="blog-tags" href="/tags/servers/">#servers</a>
-  
-    <a class="blog-tags" href="/tags/ssh/">#ssh</a>
-  
-    <a class="blog-tags" href="/tags/security/">#security</a>
-  
-</p>
+      </article>
+      
+  <div class="tags pb-4 pt-2">
+    
+    
+        <a class="badge rounded-pill text-uppercase text-bg-secondary" href="/tags/linux/">Linux</a>
+        <a class="badge rounded-pill text-uppercase text-bg-secondary" href="/tags/servers/">Servers</a>
+        <a class="badge rounded-pill text-uppercase text-bg-secondary" href="/tags/ssh/">Ssh</a>
+        <a class="badge rounded-pill text-uppercase text-bg-secondary" href="/tags/security/">Security</a>
+  </div>
 
+      <div class="row">
+    <div class="col-md">
+        
+    </div>
+    <div class="col-md text-md-end">
+        
+    </div>
+</div>
+    </div>
+  </div>
+  <footer>
+    <div class="container mt-4 pb-1">
+    <p class="small opacity-75">
+        No copyright
+        
+        // powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/imgios/not-much">imgios/not-much</a>
+        
+    </p>
+</div>
 
-
+  </footer>
 
   </main>
-  <footer><small>
-  No copyright | <a href="https://github.com/alecks20/alecks.dev">Source</a>
-</small></footer>
 
-    
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    function detectThemePreferences() {
+      let themeClasses = ["text-dark"];
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          themeClasses = ["text-light", "dark"];
+      }
+      document.body.classList.add(...themeClasses);
+    }
+
+    detectThemePreferences();
+  </script>
 </body>
-
 </html>

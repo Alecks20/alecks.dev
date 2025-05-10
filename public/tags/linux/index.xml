@@ -1,104 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Alecks 🌱</title>
     <link>http://localhost:1313/tags/linux/</link>
     <description>Recent content in Linux on Alecks 🌱</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>No copyright</copyright>
-    <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Securing ssh on your linux server.</title>
-      <link>http://localhost:1313/blog/securing-server/</link>
+      <link>http://localhost:1313/posts/securing-server/</link>
       <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/securing-server/</guid>
-      <description>&lt;p&gt;This post is made for debian based linux distros&lt;/p&gt;&#xA;&lt;h2 id=&#34;non-root-account-for-logins--disable-root-login&#34;&gt;Non-root account for logins / Disable root login.&lt;/h2&gt;&#xA;&lt;p&gt;Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adduser kuma&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then add it to the list of sudoers&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;usermod -aG sudo kuma&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;using-ssh-keys-over-plaintext-passwords&#34;&gt;Using SSH keys over plaintext passwords.&lt;/h2&gt;&#xA;&lt;p&gt;SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>This post is made for debian based linux distros</p>
-<h2 id="non-root-account-for-logins--disable-root-login">Non-root account for logins / Disable root login.</h2>
-<p>Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants</p>
-
-
-
-
-
-<pre tabindex="0"><code>adduser kuma</code></pre><p>Then add it to the list of sudoers</p>
-
-
-
-
-
-<pre tabindex="0"><code>usermod -aG sudo kuma</code></pre><h2 id="using-ssh-keys-over-plaintext-passwords">Using SSH keys over plaintext passwords.</h2>
-<p>SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.</p>
-<p>Generate an ssh key using PuttyGen and paste it on a new line in <code>/home/&lt;your_username&gt;/.ssh/authorized_keys</code></p>
-<h2 id="updating-your-ssh-configuration">Updating your SSH configuration.</h2>
-<p>This process can differ depending on your host, but for most servers the ssh config is located in <code>/etc/ssh/sshd_config</code>, in the file you want to change the following values</p>
-
-
-
-
-
-<pre tabindex="0"><code>PasswordAuthentication no</code></pre>
-
-
-
-
-<pre tabindex="0"><code>PubkeyAuthentication yes</code></pre>
-
-
-
-
-<pre tabindex="0"><code>PermitRootLogin no</code></pre><p>Changing these config vaulues will</p>
-<ul>
-<li>Disable password authentication</li>
-<li>Allow you to login using ssh keys (Which I showed how to setup above)</li>
-<li>Disable root login (Applying the steps from before)</li>
-</ul>
-<p>Run the command below to apply the motifications</p>
-
-
-
-
-
-<pre tabindex="0"><code>sudo systemctl restart ssh</code></pre><h2 id="ntfy-notifcations-on-ssh-login">NTFY notifcations on ssh login.</h2>
-<p>Adding these lines to your <code>/etc/profile</code> file will send a request to your chosen ntfy server when any user logs in via ssh</p>
-
-
-
-
-
-<pre tabindex="0"><code>if [ -n &#34;$SSH_CLIENT&#34; ]; then
-
-NTFY=&#34;${USER}@$(hostname -f) from $(echo $SSH_CLIENT|awk &#39;{print $1}&#39;)&#34;
-
-curl -u :&lt;ntfy_api_key&gt; -s -H &#34;Title: SSH Login&#34; -d &#34;$NTFY&#34; -L  &#34;https://ntfy.exaple.com/ssh&#34; &gt; /dev/null
-
-fi</code></pre><p>Modify to add your own api key and change the url to your ntfy server</p>
-<p>You can also find an example on the ntfy docs <a href="https://docs.ntfy.sh/examples/#ssh-login-alerts">here</a> (Didn&rsquo;t work for me)</p>
-]]></content:encoded>
+      <guid>http://localhost:1313/posts/securing-server/</guid>
+      <description>how to secure ssh logins on your debian-based linux box.</description>
     </item>
     <item>
       <title>Oracle cloud is a horrible platform.</title>
-      <link>http://localhost:1313/blog/oracle-cloud-rant/</link>
+      <link>http://localhost:1313/posts/oracle-cloud-rant/</link>
       <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/oracle-cloud-rant/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve previously used oracle cloud to host a large variety of services, from minecraft servers to kasm workspaces and much more.&lt;/p&gt;&#xA;&lt;p&gt;I signed up on April 20th 2023 and ended up being terminated from the platform for an unknown reason on the 29th of November 2023, I ran 2 oracle cloud accounts (Not related to the termination, both used completely different information) and only 1 of them was terminated so I continued using the platform until late 2023 (around December) when I manually terminated my other account.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>I&rsquo;ve previously used oracle cloud to host a large variety of services, from minecraft servers to kasm workspaces and much more.</p>
-<p>I signed up on April 20th 2023 and ended up being terminated from the platform for an unknown reason on the 29th of November 2023, I ran 2 oracle cloud accounts (Not related to the termination, both used completely different information) and only 1 of them was terminated so I continued using the platform until late 2023 (around December) when I manually terminated my other account.</p>
-<h2 id="no-communication--non-existant-support">No communication / Non-existant support.</h2>
-<p>When my account was terminated by oracle, I received <em>ZERO</em> communication from them about it, no email, no nothing. The only reason I found out was my uptime monitor notifying me about it going offline which I then looked into. When logging into their website I found that my dashboard was broken. Every page on it said “Permission denied” or something along those lines. Nothing said my account was terminated until I googled the cause and found a reddit post talking about having the exact same thing happening to them.</p>
-<p>The annoying thing about it was that there was no warning, no notification or anything that I could&rsquo;ve seen so I could download my data before the termination.</p>
-<p>To make the situation even worse, I couldn’t even contact support about the issue because you needed an “Active Tenancy” to use the support service but since my account was terminated/disabled I couldn’t access it, I couldn’t even use the live chat on the dashboard because you needed a premium plan to talk to a real person on it.</p>
-<p>There are a few things I found out that could’ve got my account terminated, but its impossible to know with the absense of information I&rsquo;ve been provided.</p>
-<ul>
-<li>Since I ran a minecraft server off it, there would constantly be people spamming my server from server/port scanners, which could&rsquo;ve been detected as malicious.</li>
-<li>When trying to upgrade my server to a PAYG account (if you don’t upgrade then you can’t go over the free tier limits) oracle suddendly said my card (The one I signed up with) was invalid and removed it from my account, even though the card was perfectly fine at signup?</li>
-</ul>
-<h2 id="closing-your-account-doesnt-actually-close-your-account">“Closing” your account, doesn&rsquo;t actually close your account.</h2>
-<p>Another issue I have with oracle cloud is that when you “delete” a tenancy (An account) it doesn’t actually delete <em>ANYTHING</em>, it just disables it putting you under the illusion that its gone. You can even still login to the account and access the dashboard. I disabled my other oracle cloud account expecting to be able to sign up for it again once the old one was deleted and change the home region, however im still waiting to this day 4 months later for it to fully delete and it hasn’t yet and im not expecting it to at all.</p>
-<p>To conclude, their offering is tempting and quite generous but you should outright avoid it for anything except minecraft servers or anything that you care about, even then keep backups on a 3rd party service (Such as backblaze).</p>
-]]></content:encoded>
+      <guid>http://localhost:1313/posts/oracle-cloud-rant/</guid>
+      <description>my experience with oracle cloud, and why I typically wouldn&amp;rsquo;t recommend it.</description>
     </item>
   </channel>
 </rss>
