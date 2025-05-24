@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>home on Alecks 🌱</title>
+    <title>Home on Alecks 🌱</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in home on Alecks 🌱</description>
+    <description>Recent content in Home on Alecks 🌱</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>No copyright</copyright>
-    <lastBuildDate>Wed, 07 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Homelab</title>
+      <link>http://localhost:1313/homelab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/homelab/</guid>
+      <description>&lt;p&gt;The cloud is expensive, you can have random terminations or account issues, theres no physical control over your data and much more. Which is why I plan to have zero cloud server subscriptions by 2026 and run everything from here.&lt;/p&gt;&#xA;&lt;p&gt;Currently everything is brand new hardware but I&amp;rsquo;d like to get into repurposing some second-hand builds later on.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Pyro&lt;/strong&gt; &lt;em&gt;-&lt;/em&gt; Beefy build for game servers and other miscellaneous docker containers.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Securing ssh on your linux server.</title>
-      <link>http://localhost:1313/posts/securing-server/</link>
+      <link>http://localhost:1313/blog/securing-server/</link>
       <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/securing-server/</guid>
-      <description>how to secure ssh logins on your debian-based linux box.</description>
+      <guid>http://localhost:1313/blog/securing-server/</guid>
+      <description>&lt;p&gt;This post is made for debian based linux distros&lt;/p&gt;&#xA;&lt;h2 id=&#34;non-root-account-for-logins--disable-root-login&#34;&gt;Non-root account for logins / Disable root login.&lt;/h2&gt;&#xA;&lt;p&gt;Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adduser kuma&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then add it to the list of sudoers&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;usermod -aG sudo kuma&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;using-ssh-keys-over-plaintext-passwords&#34;&gt;Using SSH keys over plaintext passwords.&lt;/h2&gt;&#xA;&lt;p&gt;SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Oracle cloud is a horrible platform.</title>
-      <link>http://localhost:1313/posts/oracle-cloud-rant/</link>
+      <link>http://localhost:1313/blog/oracle-cloud-rant/</link>
       <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/oracle-cloud-rant/</guid>
-      <description>my experience with oracle cloud, and why I typically wouldn&amp;rsquo;t recommend it.</description>
+      <guid>http://localhost:1313/blog/oracle-cloud-rant/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve previously used oracle cloud to host a large variety of services, from minecraft servers to kasm workspaces and much more.&lt;/p&gt;&#xA;&lt;p&gt;I signed up on April 20th 2023 and ended up being terminated from the platform for an unknown reason on the 29th of November 2023, I ran 2 oracle cloud accounts (Not related to the termination, both used completely different information) and only 1 of them was terminated so I continued using the platform until late 2023 (around December) when I manually terminated my other account.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,7 @@
 ---
-title: "home"
+title: "Home"
 menu: "main"
+weight: 1
 ---
 Hello Internet, 
 
@@ -8,4 +9,4 @@ My name is Alecks, I'm a self-taught developer from Australia with a passion for
 
 I use this website to publish my writings (blog posts, rants, guides) and run my own little digital garden on the internet.
 
-Find me on the web - *[Steam](https://steamcommunity.com/profiles/76561199121598457/), [GitHub](https://github.com/Alecks20), [Twitter/X](https://x.com/theyrelikesheep)*
+Find me on the web - [Steam](https://steamcommunity.com/profiles/76561199121598457/), [GitHub](https://github.com/Alecks20)

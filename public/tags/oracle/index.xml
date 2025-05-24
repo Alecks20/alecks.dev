@@ -7,14 +7,14 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>No copyright</copyright>
-    <lastBuildDate>Wed, 07 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Oracle cloud is a horrible platform.</title>
-      <link>http://localhost:1313/posts/oracle-cloud-rant/</link>
+      <link>http://localhost:1313/blog/oracle-cloud-rant/</link>
       <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/oracle-cloud-rant/</guid>
-      <description>my experience with oracle cloud, and why I typically wouldn&amp;rsquo;t recommend it.</description>
+      <guid>http://localhost:1313/blog/oracle-cloud-rant/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve previously used oracle cloud to host a large variety of services, from minecraft servers to kasm workspaces and much more.&lt;/p&gt;&#xA;&lt;p&gt;I signed up on April 20th 2023 and ended up being terminated from the platform for an unknown reason on the 29th of November 2023, I ran 2 oracle cloud accounts (Not related to the termination, both used completely different information) and only 1 of them was terminated so I continued using the platform until late 2023 (around December) when I manually terminated my other account.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

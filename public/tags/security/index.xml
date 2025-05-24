@@ -11,10 +11,10 @@
     <atom:link href="http://localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Securing ssh on your linux server.</title>
-      <link>http://localhost:1313/posts/securing-server/</link>
+      <link>http://localhost:1313/blog/securing-server/</link>
       <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/securing-server/</guid>
-      <description>how to secure ssh logins on your debian-based linux box.</description>
+      <guid>http://localhost:1313/blog/securing-server/</guid>
+      <description>&lt;p&gt;This post is made for debian based linux distros&lt;/p&gt;&#xA;&lt;h2 id=&#34;non-root-account-for-logins--disable-root-login&#34;&gt;Non-root account for logins / Disable root login.&lt;/h2&gt;&#xA;&lt;p&gt;Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adduser kuma&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then add it to the list of sudoers&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;usermod -aG sudo kuma&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;using-ssh-keys-over-plaintext-passwords&#34;&gt;Using SSH keys over plaintext passwords.&lt;/h2&gt;&#xA;&lt;p&gt;SSH Keys are both more convenient and more secure than a regular plaintext password, especially the default one set by your hosting provider.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

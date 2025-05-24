@@ -1,11 +1,13 @@
 
----
-author: "Alecks"
-title: "Oracle cloud is a horrible platform."
-date: "2024-03-10"
-description: "my experience with oracle cloud, and why I typically wouldn't recommend it."
-tags: ["linux", "servers", "oracle", "rant"]
----
++++
+author = "Alecks"
+title = "Oracle cloud is a horrible platform."
+date = "2024-03-10"
+description = ""
+tags = [
+    "linux","servers","oracle","rant"
+]
++++
 
 I've previously used oracle cloud to host a large variety of services, from minecraft servers to kasm workspaces and much more.
 

@@ -1,28 +1,26 @@
 
----
-author: "Alecks"
-title: "Securing ssh on your linux server."
-date: "2024-04-25"
-description: "Guide to emoji usage in Hugo"
-tags: [
++++
+author = "Alecks"
+title = "Securing ssh on your linux server."
+date = "2024-04-25"
+description = "Guide to emoji usage in Hugo"
+tags = [
     "linux","servers","ssh","security"
 ]
-summary: how to secure ssh logins on your debian-based linux box.
-toc: true
----
++++
 
 This post is made for debian based linux distros
 
 ## Non-root account for logins / Disable root login.
 Disabling the ability to login as root helps with many automated bots that brute-force ssh into your server, start by making a new user with any username you wants
 
-```md
+```
 adduser kuma
 ```
 
 Then add it to the list of sudoers
 
-```md
+```
 usermod -aG sudo kuma
 ```
 
@@ -34,15 +32,15 @@ Generate an ssh key using PuttyGen and paste it on a new line in `/home/<your_us
 ## Updating your SSH configuration.
 This process can differ depending on your host, but for most servers the ssh config is located in `/etc/ssh/sshd_config`, in the file you want to change the following values
 
-```md
+```
 PasswordAuthentication no
 ```
 
-```md
+```
 PubkeyAuthentication yes
 ```
 
-```md
+```
 PermitRootLogin no
 ```
 
@@ -53,14 +51,14 @@ Changing these config vaulues will
 
 Run the command below to apply the motifications
 
-```md
+```
 sudo systemctl restart ssh
 ```
 
 ## NTFY notifcations on ssh login.
 Adding these lines to your `/etc/profile` file will send a request to your chosen ntfy server when any user logs in via ssh
 
-```md
+```
 if [ -n "$SSH_CLIENT" ]; then
 
 NTFY="${USER}@$(hostname -f) from $(echo $SSH_CLIENT|awk '{print $1}')"
